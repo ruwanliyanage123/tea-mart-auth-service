@@ -31,4 +31,9 @@ public class AuthController {
     public ResponseEntity<MenuIconDTO> createMenu(@RequestBody MenuIconDTO dto){
         return new ResponseEntity<>(authService.createMenuIcon(dto), HttpStatus.CREATED);
     }
+
+    @GetMapping(value = "/menu/{id}")
+    public ResponseEntity<MenuIconDTO> greateMenuById(){
+        return new ResponseEntity<>();
+    }
 }
